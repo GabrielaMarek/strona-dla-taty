@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EGM studio</title>
+    <link rel="stylesheet" href="css/grafika.css">
+</head>
+
+<body>
+    <div class="hero">
+        <video autoplay loop muted plays-inline class="back-video">
+            <source src="Stronafilm.mp4" type="video/mp4">
+        </video>
+
+        <nav>
+            <a href="Index.html"><img src="LOGOegm.png" class="logo"></a>
+            <ul>
+                <li><a href="#">START</a></li>
+                <li><a href="portfolio.html">PORTFOLIO</a></li>
+                <li><a href="kontakt.html">KONTAKT</a></li>
+                <li><a href="https://www.facebook.com/EGMstudioo" target="_blank"><img src="ikony/icons8-facebook-24.png" class="ikonka"></a></li>
+                <li><a href="https://www.instagram.com/egmstudio.pl/" target="_blank"><img src="ikony/icons8-instagram-30.png" class="ikonka"></a></li>
+            </ul>
+        </nav>
+        <div class="content">
+            <h1>Tu znajdziesz<span></span></h1>
+            <h1>Swój wymarzony<span></span></h1>
+            <h1>Film ślubny.<span></span></h1>
+            <a href="portfolio.html" type="button" class="cta">ZOBACZ WIĘCEJ</a>
+        </div>       
+    </div>
+    <div class="dupa">
+        <h2>O nas</h2>
+        <p>Ta strona jest miejscem, w którym chcemy mówić o filmografii.</p>
+        <p>Filmowanie to nasza pasja. Realizujemy wiele projektów, związanych nie tylko ze ślubem. dzięki czemu mamy możliwość szlifowania naszego warsztatu pod wieloma kątami. W ten sposób jesteśmy na bieżąco z nowinkami technicznymi. Nie boimy się realizować nieszablonowych projektów i zwariowanych pomysłów - po prostu uwielbiamy wyzwania!</p>
+        <p>Mamy bardzo pozytywne podejście do życia, dlatego przy nas nie będziecie czuli skrępowania. Jesteśmy zwykłymi ludźmi z którymi z pewnością znajdziecie wspólny język. Swoboda i naturalność to podstawa udanego reportażu. Nie rzucamy się w oczy, w końcu to Ty i Twoja druga połówka jesteście głównymi bohaterami tego dnia.</p>
+    </div>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            var nav = document.querySelector('nav');
+            if (window.scrollY > 0) {
+                nav.classList.add('scroll-down');
+            } else {
+                nav.classList.remove('scroll-down');
+            }
+        });
+    </script>
+
+    <footer>
+        <p>&copy; 2023 EGM Studio</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+</body>
+</html>

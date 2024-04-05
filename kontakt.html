@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="vievport" content="width=device-width, initial-scale=1.0">
+        <title>EGM studio</title>
+        <link rel="stylesheet" href="css/kontakt.css">
+    </head>
+
+    <body>
+        <div class="navbar">
+        <nav>
+            <a href="Index.html"><img src="LOGOegm.png" class="logo"></a>
+            <ul>
+                <li><a href="Index.html">START</a></li>
+                <li><a href="portfolio.html">PORTFOLIO</a></li>
+                <li><a href="kontakt.html">KONTAKT</a></li>
+                <li><a href="https://www.facebook.com/EGMstudioo" target="_blank"><img src="ikony/icons8-facebook-24.png" class="ikonka"></a></li>
+                <li><a href="https://www.instagram.com/egmstudio.pl/" target="_blank"><img src="ikony/icons8-instagram-30.png" class="ikonka"></a></li>
+            </ul>
+        </nav>
+        <div class="szablon">
+            <div class="form">
+                <form action="email.php" class="form-group" onsubmit="sendEmail(); reset(); return false;">
+
+                    <div>
+                        <label for="name"></label>
+                        <input type="text" id="name" name="name" placeholder="Imię i nazwisko">
+                    </div>
+                    <br>
+                    <div>
+                        <label for="email"></label>
+                        <input type="text" id="email" name="email" placeholder="Email">
+                    </div>
+                    <br>
+                    <div>
+                        <label for="city"></label>
+                        <input type="text" id="city" name="city" placeholder="Miejscowość">
+                    </div>
+                    <br>
+                    <div>
+                        <label for="message"></label>
+                        <textarea type="text" id="message" name="message" rows="6" placeholder="Wiadomość"></textarea>
+                    </div>
+                    <div>
+                        <button type="submit">Wyślij</button>
+                    </div>
+                </form>
+            </div>
+            <div class="tekst">
+                <h1>Napisz do nas</h1>
+                <p>Stacjonujemy w Dębicy. 
+                    Jednak to gdzie zrealizujemy Twój film zależy tylko od Ciebie, 
+                    z pewnością dotrzemy na czas w każdy zakątek Polski.</p>
+                    <p><img src="ikony/icons8-map-50.png" class="ikony">Dębica, Polska</img></p>
+                    <p><img src="ikony/icons8-phone-50.png" class="ikony">607 530 579</img></p>
+                    <p><img src="ikony/icons8-mail-50.png" class="ikony">info@egmstudio.pl</img></p>
+            </div>
+        </div>
+        <script>
+            window.addEventListener('scroll', function() {
+                var nav = document.querySelector('nav');
+                if (window.scrollY > 0) {
+                    nav.classList.add('scroll-down');
+                } else {
+                    nav.classList.remove('scroll-down');
+                }
+            });
+        </script>
+        
+    </body>
+</html>

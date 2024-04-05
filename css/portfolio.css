@@ -1,0 +1,135 @@
+@import 'https://fonts.googleapis.com/css?family=Montserrat:300, 400, 700&display=swap';
+body {
+  overflow: overlay;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #222121;
+}
+*::-webkit-scrollbar {
+    display: block;
+    width: 10px;
+  }
+  
+  *::-webkit-scrollbar-button {
+    display: none;
+  }
+  
+  *::-webkit-scrollbar-track {
+    background-color: #00000000;
+  }
+  
+  *::-webkit-scrollbar-track-piece {
+    background-color: #00000000;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: #00000040;
+    border: 1px solid #ffffff40;
+    border-radius: 24px;
+  }
+nav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 15px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    list-style: none;
+   
+    overflow: hidden;
+    color: white;
+    padding: 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin: 0;
+    transition: 1s;
+    z-index: 1;
+}
+
+nav .logo {
+    width: 230px;
+    margin-left: 60px;
+    justify-content: left;
+}
+nav.black {
+    background:#222121;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 20px;
+    position: relative;
+}
+nav ul li a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    font-weight: 300;
+}
+nav ul li::after{
+    content: "";
+    height: 3px;
+    width: 0;
+    background: #2466e0;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+nav ul li:hover::after{
+    width: 100%;
+}
+h2 {
+    background-color:#222121;
+    font-size: 25px;
+    text-align: left;
+    padding: 20px;
+    color: white;
+    font-weight: 300;
+}
+
+p {
+    background-color:#222121;
+    font-size: 20px;
+    padding: 7px;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: white;
+}
+.ikonka{
+    width: 25px;
+    height: 25px;
+}
+.container{
+    display: grid;
+    grid-template-columns: 50% 50%;
+
+    padding: 2%;
+    margin-top: 70px;
+}
+.grid-item {
+    background-color: transparent;
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+}
+.miniatura{
+    width: 100%;
+}
+
+nav {
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .scroll-down {
+    transform: translateY(0%);
+    background-color: #222121;
+  }
