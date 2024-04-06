@@ -83,17 +83,7 @@ nav ul li:hover::after{
     justify-content: flex-start;
     color: white;
 }
-/*.content::after{
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    
-    opacity: .7;
-    z-index: -1;
-}*/
+
 .content h1 {
     display: block;
     width: fit-content;
@@ -101,19 +91,8 @@ nav ul li:hover::after{
     z-index: -1;
     font-size: 50px;
     font-weight: 300;
-    /*color: transparent;
-    animation: text-reveal .5s ease forwards;
-    animation-delay: 1s;*/
+   
 }
-/*.content h1:nth-child(1){
-    animation-delay: 1s;
-}
-.content h1:nth-child(2) {
-    animation-delay: 2s;
-}
-.content h1:nth-child(3){
-    animation-delay: 3s;
-}*/
 .content h1 span{
     position: absolute;
     top: 0;
@@ -121,39 +100,21 @@ nav ul li:hover::after{
     height: 100%;
     width: 0%;
     background-color: #2466e0;
-    /*animation: text_reveal_box 1s ease;
-    animation-delay: 0.5s;*/
+
 }
-/*.content h1:nth-child(1) span{
-    animation-delay: 0.5s;
-}
-.content h1:nth-child(2) span{
-    animation-delay: 1.5s;
-}
-.content h1:nth-child(3) span{
-    animation-delay: 2.5s;
-}*/
 
 .content .cta {
     text-decoration: none;
     display: inline-block;
     position: absolute;
-    /*z-index: -1;*/
     color: rgb(255, 255, 255);
     background-color: transparent;
     font-size: 24px;
     border: 2px solid #2466e0;
     padding: 10px 30px;
-    /*border-radius: 50px;*/
-    margin-top: 20px;
-    /*transition: .3s ease;
-    transition-property: background-color, color;*/
-}
-/*.content .cta:hover{
-    color: black;
-    background-color: #2466e0;
-}*/
 
+    margin-top: 20px;
+}
 
 .back-video {
     position: absolute;
@@ -162,12 +123,16 @@ nav ul li:hover::after{
     z-index: -1;
 }
 
-.dupa{
+.dupa {
     display: grid;
-    background-color:#222121;
+    background-color: #222121;
     font-weight: 300;
     text-align: justify;
+    padding: 20px;
+    margin: 0; 
+    justify-content: left;
 }
+
 h2 {
     background-color:#222121;
     font-size: 25px;
