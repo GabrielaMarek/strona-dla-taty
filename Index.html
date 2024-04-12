@@ -56,7 +56,7 @@
         <p>Mamy bardzo pozytywne podejście do życia, dlatego przy nas nie będziecie czuli skrępowania. Jesteśmy zwykłymi ludźmi z którymi z pewnością znajdziecie wspólny język. Swoboda i naturalność to podstawa udanego reportażu. Nie rzucamy się w oczy, w końcu to Ty i Twoja druga połówka jesteście głównymi bohaterami tego dnia.</p>
     </div>
 
-    <footer class="fixed-bottom">
+    <footer class="fixed-bottom" id="footer">
         <div class="container">
             <p>&copy; 2024 EGM Studio</p>
         </div>
@@ -72,6 +72,23 @@
                 nav.classList.remove('scroll-down');
             }
         });
+
+        function checkFooterVisibility() {
+            var footer = document.getElementById('footer');
+            var scrollPosition = window.pageYOffset;
+            var windowSize = window.innerHeight;
+            var bodyHeight = document.body.offsetHeight;
+
+            if ((scrollPosition + windowSize) >= bodyHeight) {
+                footer.style.display = 'block'; 
+            } else {
+                footer.style.display = 'none'; 
+            }
+        }
+
+        window.addEventListener('scroll', checkFooterVisibility);
+
+        checkFooterVisibility();
     </script>
 </body>
 </html>
