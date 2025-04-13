@@ -1,65 +1,242 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta name="vievport" content="width=device-width, initial-scale=1.0">
-        <title>EGM studio</title>
-        <link rel="stylesheet" href="css/portfolio.css">
-    </head>
-
-    <body>
-        <div class="navbar">
-        <nav>
-            <a href="strona taty.html"><img src="LOGOegm.png" class="logo"></a>
-            <ul>
-                <li><a href="strona taty.html">START</a></li>
-                <li><a href="portfolio.html">PORTFOLIO</a></li>
-                <li><a href="kontakt.html">KONTAKT</a></li>
-                <li><a href="https://www.facebook.com/EGMstudioo" target="_blank"><img src="ikony/icons8-facebook-24.png" class="ikonka"></a></li>
-                <li><a href="https://www.instagram.com/egmstudio.pl/" target="_blank"><img src="ikony/icons8-instagram-30.png" class="ikonka"></a></li>
-            </ul>
-        </nav>
-        </div>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EGM Studio - Professional Portfolio</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Magnific Popup CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+    <link rel="stylesheet" href="css/grafika.css">
+    <link rel="stylesheet" href="css/portfolio.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <div class="grid-item">
-                <a href="film.html">
-                    <img src="miniatury/i1.jpg" class="miniatura" >
-                </a>
-            </div>
-            <div class="grid-item">
-                <img src="miniatury/i2.jpg" class="miniatura">
-            </div>
-            <div class="grid-item">
-                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
-                    <img src="miniatury/i3.jpg" class="miniatura" >
-                </a>
-            </div>
-            <div class="grid-item">
-                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
-                    <img src="miniatury/i4.jpg" class="miniatura" >
-                </a>
-            </div>
-            <div class="grid-item">
-                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
-                    <img src="miniatury/i5.jpg" class="miniatura" >
-                </a>
-            </div>
-            <div class="grid-item">
-                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
-                    <img src="miniatury/i6.jpg" class="miniatura" >
-                </a>
+            <a class="navbar-brand" href="index.html">
+                <img src="LOGOegm.png" alt="EGM Logo" class="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">START</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="portfolio.html">PORTFOLIO</a></li>
+                    <li class="nav-item"><a class="nav-link" href="kontakt.html">KONTAKT</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://www.facebook.com/EGMstudioo" target="_blank"><img src="ikony/icons8-facebook-24.png" class="social-icon" alt="Facebook"></a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://www.instagram.com/egmstudio.pl/" target="_blank"><img src="ikony/icons8-instagram-30.png" class="social-icon" alt="Instagram"></a></li>
+                </ul>
             </div>
         </div>
-        <script>
-            window.addEventListener('scroll', function() {
-                var nav = document.querySelector('nav');
-                if (window.scrollY > 0) {
-                    nav.classList.add('scroll-down');
-                } else {
-                    nav.classList.remove('scroll-down');
+    </nav>
+
+    <section class="portfolio-section">
+        <div class="container">
+            <div class="filter-controls">
+                <button class="filter-btn active" data-filter="all">Wszystko</button>
+                <button class="filter-btn" data-filter="corporate">Korporacyjne</button>
+                <button class="filter-btn" data-filter="wedding">Śluby</button>
+                <button class="filter-btn" data-filter="product">Produkty</button>
+                <button class="filter-btn" data-filter="music">Muzyka</button>
+            </div>
+
+            <div class="row g-4 gallery-grid">
+                <div class="col-12 col-md-6 col-lg-4" data-category="corporate">
+                    <div class="portfolio-item">
+                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="video-popup">
+                            <div class="image-wrapper">
+                                <img src="miniatury/i1.jpg" class="img-fluid" alt="Corporate Video">
+                                <div class="overlay">
+                                    <div class="overlay-content">
+                                        <h3>Wideo Korporacyjne</h3>
+                                        <p>Promocja Biznesu</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4" data-category="wedding">
+                    <div class="portfolio-item">
+                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="video-popup">
+                            <div class="image-wrapper">
+                                <img src="miniatury/i2.jpg" class="img-fluid" alt="Wedding Highlights">
+                                <div class="overlay">
+                                    <div class="overlay-content">
+                                        <h3>Reportaże Ślubne</h3>
+                                        <p>Pokazy Wydarzeń</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4" data-category="product">
+                    <div class="portfolio-item">
+                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="video-popup">
+                            <div class="image-wrapper">
+                                <img src="miniatury/i3.jpg" class="img-fluid" alt="Product Commercial">
+                                <div class="overlay">
+                                    <div class="overlay-content">
+                                        <h3>Reklamy Produktów</h3>
+                                        <p>Marketing</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4" data-category="music">
+                    <div class="portfolio-item">
+                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="video-popup">
+                            <div class="image-wrapper">
+                                <img src="miniatury/i4.jpg" class="img-fluid" alt="Music Video">
+                                <div class="overlay">
+                                    <div class="overlay-content">
+                                        <h3>Teledyski</h3>
+                                        <p>Produkcje Artystyczne</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4" data-category="corporate">
+                    <div class="portfolio-item">
+                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="video-popup">
+                            <div class="image-wrapper">
+                                <img src="miniatury/i5.jpg" class="img-fluid" alt="Documentary">
+                                <div class="overlay">
+                                    <div class="overlay-content">
+                                        <h3>Filmy Dokumentalne</h3>
+                                        <p>Treści Edukacyjne</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4" data-category="product">
+                    <div class="portfolio-item">
+                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="video-popup">
+                            <div class="image-wrapper">
+                                <img src="miniatury/i6.jpg" class="img-fluid" alt="Short Film">
+                                <div class="overlay">
+                                    <div class="overlay-content">
+                                        <h3>Krótkie Formy</h3>
+                                        <p>Produkcje Filmowe</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer">
+        <div class="container">
+            <p>&copy; 2024 EGM Studio | Profesjonalne Produkcje Wideo</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    
+    <script>
+        // Portfolio Filtering
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+            function getRandomPosition() {
+                return {
+                    x: (Math.random() - 0.5) * window.innerWidth,
+                    y: (Math.random() - 0.5) * window.innerHeight
+                };
+            }
+
+            function animateItems(items) {
+                items.forEach(item => {
+                    const pos = getRandomPosition();
+                    item.style.transform = `translate(${pos.x}px, ${pos.y}px)`;
+                    item.style.opacity = '0';
+                    item.style.transition = 'none';
+                    
+                    requestAnimationFrame(() => {
+                        item.style.transition = 'all 0.8s cubic-bezier(0.23, 1, 0.32, 1)';
+                        item.style.transform = 'translate(0, 0)';
+                        item.style.opacity = '1';
+                    });
+                });
+            }
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const category = this.dataset.filter;
+                    
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+
+                    const activeItems = [];
+                    portfolioItems.forEach(item => {
+                        const parent = item.parentElement;
+                        const itemCategory = parent.dataset.category;
+                        
+                        if(category === 'all' || category === itemCategory) {
+                            parent.style.display = 'block';
+                            activeItems.push(item);
+                        } else {
+                            item.style.opacity = '0';
+                            item.style.transform = 'scale(0.8)';
+                            setTimeout(() => {
+                                parent.style.display = 'none';
+                            }, 300);
+                        }
+                    });
+
+                    // Animate active items
+                    setTimeout(() => {
+                        animateItems(activeItems);
+                    }, 50);
+                });
+            });
+
+            // Video Popup
+            $('.video-popup').magnificPopup({
+                type: 'iframe',
+                gallery: { enabled: true },
+                iframe: {
+                    patterns: {
+                        youtube: {
+                            index: 'youtube.com/',
+                            id: 'v=',
+                            src: '//www.youtube.com/embed/%id%?autoplay=1'
+                        }
+                    }
                 }
             });
 
-
-        </script>
-    </body>
+            // Navbar Scroll Effect
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 50) {
+                    document.querySelector('nav').classList.add('scrolled');
+                } else {
+                    document.querySelector('nav').classList.remove('scrolled');
+                }
+            });
+        });
+    </script>
+</body>
 </html>

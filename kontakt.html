@@ -1,71 +1,146 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta name="vievport" content="width=device-width, initial-scale=1.0">
-        <title>EGM studio</title>
-        <link rel="stylesheet" href="css/kontakt.css">
-    </head>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt - EGM studio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/grafika.css">
+    <link rel="stylesheet" href="css/kontakt.css">
+</head>
+<body>
 
-    <body>
-        <div class="navbar">
-        <nav>
-            <a href="Index.html"><img src="LOGOegm.png" class="logo"></a>
-            <ul>
-                <li><a href="Index.html">START</a></li>
-                <li><a href="portfolio.html">PORTFOLIO</a></li>
-                <li><a href="kontakt.html">KONTAKT</a></li>
-                <li><a href="https://www.facebook.com/EGMstudioo" target="_blank"><img src="ikony/icons8-facebook-24.png" class="ikonka"></a></li>
-                <li><a href="https://www.instagram.com/egmstudio.pl/" target="_blank"><img src="ikony/icons8-instagram-30.png" class="ikonka"></a></li>
-            </ul>
-        </nav>
-        <div class="szablon">
-            <div class="form">
-                <form action="email.php" class="form-group" onsubmit="sendEmail(); reset(); return false;">
-
-                    <div>
-                        <label for="name"></label>
-                        <input type="text" id="name" name="name" placeholder="Imię i nazwisko">
-                    </div>
-                    <br>
-                    <div>
-                        <label for="email"></label>
-                        <input type="text" id="email" name="email" placeholder="Email">
-                    </div>
-                    <br>
-                    <div>
-                        <label for="city"></label>
-                        <input type="text" id="city" name="city" placeholder="Miejscowość">
-                    </div>
-                    <br>
-                    <div>
-                        <label for="message"></label>
-                        <textarea type="text" id="message" name="message" rows="6" placeholder="Wiadomość"></textarea>
-                    </div>
-                    <div>
-                        <button type="submit">Wyślij</button>
-                    </div>
-                </form>
-            </div>
-            <div class="tekst">
-                <h1>Napisz do nas</h1>
-                <p>Stacjonujemy w Dębicy. 
-                    Jednak to gdzie zrealizujemy Twój film zależy tylko od Ciebie, 
-                    z pewnością dotrzemy na czas w każdy zakątek Polski.</p>
-                    <p><img src="ikony/icons8-map-50.png" class="ikony">Dębica, Polska</img></p>
-                    <p><img src="ikony/icons8-phone-50.png" class="ikony">607 530 579</img></p>
-                    <p><img src="ikony/icons8-mail-50.png" class="ikony">info@egmstudio.pl</img></p>
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="LOGOegm.png" alt="EGM Logo" class="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">START</a></li>
+                    <li class="nav-item"><a class="nav-link" href="portfolio.html">PORTFOLIO</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="kontakt.html">KONTAKT</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://www.facebook.com/EGMstudioo" target="_blank"><img src="ikony/icons8-facebook-24.png" class="social-icon" alt="Facebook"></a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://www.instagram.com/egmstudio.pl/" target="_blank"><img src="ikony/icons8-instagram-30.png" class="social-icon" alt="Instagram"></a></li>
+                </ul>
             </div>
         </div>
-        <script>
-            window.addEventListener('scroll', function() {
-                var nav = document.querySelector('nav');
-                if (window.scrollY > 0) {
-                    nav.classList.add('scroll-down');
-                } else {
-                    nav.classList.remove('scroll-down');
-                }
-            });
-        </script>
-        
-    </body>
+    </nav>
+
+    <div class="contact-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Skontaktuj się z nami</h1>
+                <p>Jesteśmy dostępni, aby odpowiedzieć na wszystkie Twoje pytania</p>
+            </div>
+        </div>
+    </div>
+
+    <main class="contact-main">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info-wrapper">
+                    <div class="contact-info">
+                        <h3>Bezpośredni kontakt</h3>
+                        
+                        <div class="contact-item highlight">
+                            <div class="icon-box">
+                                <img src="ikony/icons8-phone-50.png" alt="Phone icon">
+                            </div>
+                            <div class="contact-details">
+                                <h4>Telefon</h4>
+                                <p>+48 123 456 789</p>
+                                <p class="availability">Dostępni 8:00-20:00</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item highlight">
+                            <div class="icon-box">
+                                <img src="ikony/icons8-mail-50.png" alt="Email icon">
+                            </div>
+                            <div class="contact-details">
+                                <h4>E-mail</h4>
+                                <p>kontakt@egmstudio.pl</p>
+                                <p class="availability">Odpowiadamy w ciągu 24h</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="icon-box">
+                                <img src="ikony/icons8-map-50.png" alt="Location icon">
+                            </div>
+                            <div class="contact-details">
+                                <h4>Biuro</h4>
+                                <p>ul. Filmowa 15</p>
+                                <p>00-001 Warszawa</p>
+                            </div>
+                        </div>
+
+                        <div class="social-section">
+                            <h4>Obserwuj nas</h4>
+                            <div class="social-links">
+                                <a href="https://www.facebook.com/EGMstudioo" target="_blank">
+                                    <img src="ikony/icons8-facebook-24.png" alt="Facebook">
+                                </a>
+                                <a href="https://www.instagram.com/egmstudio.pl/" target="_blank">
+                                    <img src="ikony/icons8-instagram-30.png" alt="Instagram">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="map-wrapper">
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d24374.111869871416!2d21.410538509904896!3d50.04858941926197!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spl!2spl!4v1744553693712!5m2!1spl!2spl"
+                                style="border:0" 
+                                allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="consultation-cta">
+                        <h4>Umów bezpłatną konsultację</h4>
+                        <p>Porozmawiajmy o Twoim projekcie!</p>
+                        <a href="mailto:kontakt@egmstudio.pl" class="btn btn-primary">Napisz do nas</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer id="footer">
+        <div class="container">
+            <p>&copy; 2024 EGM Studio</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function checkFooterVisibility() {
+            const footer = document.getElementById('footer');
+            const scrollPosition = window.pageYOffset;
+            const windowHeight = window.innerHeight;
+            const documentHeight = document.body.scrollHeight;
+
+            if (scrollPosition + windowHeight >= documentHeight - 100) {
+                footer.classList.add('visible');
+            } else {
+                footer.classList.remove('visible');
+            }
+        }
+
+        window.addEventListener('scroll', checkFooterVisibility);
+        checkFooterVisibility();
+
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
 </html>
